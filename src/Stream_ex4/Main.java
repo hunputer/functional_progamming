@@ -33,13 +33,10 @@ public class Main {
 		boolean isNone = menu.stream().noneMatch(dish -> dish.getCalories() > 1000);
 		System.out.println(isNone);
 		
+		//allMatch 확인
 		boolean isAll = menu.stream().allMatch(dish -> dish.getCalories() < 1000);
 		System.out.println(isAll);
 		
-		
-		
-		
-
 	}
 
 }
