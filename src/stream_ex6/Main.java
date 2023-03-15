@@ -79,7 +79,6 @@ public class Main {
 		//7.전체 트랜잭션 중 최솟값은 얼마인가?
 		Optional<Integer> result6 = transactions.stream().map(t -> t.getValue()).reduce(Integer::min);
 		System.out.println(result6.get());
-		System.out.println();
 		
 	}
 
