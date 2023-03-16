@@ -20,9 +20,15 @@ public class Main {
 	              new Dish("salmon", false, 450, Dish.Type.FISH)
 	              );
 		
+		//칼로리의 모든 합
 		int calories = menu.stream().mapToInt(m -> m.getCalories()).sum();
-		
 		System.out.println(calories);
+		
+		double calories_double = menu.stream().mapToDouble(Dish::getCalories).sum();
+		System.out.println(calories);
+		
+		long calories_Long = menu.stream().mapToLong(Dish::getCalories).sum();
+		System.out.println(calories_Long);
 
 	}
 
