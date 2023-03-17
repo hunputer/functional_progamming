@@ -46,6 +46,14 @@ public class Main {
 			System.out.print(dish.getName() + ", ");
 		}
 		System.out.println();
+		
+		//칼로리 전체함
+		int sumCalory = menu.stream().collect(Collectors.summingInt(Dish::getCalories));
+		System.out.println(sumCalory);
+		
+		double averageCalory = menu.stream().collect(Collectors.averagingDouble(Dish::getCalories));
+		System.out.println(averageCalory);
+		
 	}
 
 }
