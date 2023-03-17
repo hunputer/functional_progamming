@@ -51,8 +51,13 @@ public class Main {
 		int sumCalory = menu.stream().collect(Collectors.summingInt(Dish::getCalories));
 		System.out.println(sumCalory);
 		
+		//칼로리 평균
 		double averageCalory = menu.stream().collect(Collectors.averagingDouble(Dish::getCalories));
 		System.out.println(averageCalory);
+		
+		//문자열 연결
+		String shortMenu = menu.stream().map(Dish::getName).collect(Collectors.joining(", "));
+		System.out.println(shortMenu);
 		
 	}
 
